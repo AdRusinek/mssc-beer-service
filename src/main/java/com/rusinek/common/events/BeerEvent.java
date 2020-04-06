@@ -1,4 +1,4 @@
-package com.rusinek.msscbeerservice.events;
+package com.rusinek.common.events;
 
 import com.rusinek.msscbeerservice.web.model.BeerDto;
 import lombok.*;

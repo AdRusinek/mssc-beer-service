@@ -1,8 +1,8 @@
 package com.rusinek.msscbeerservice.services.brewing;
 
 import com.rusinek.msscbeerservice.domain.Beer;
-import com.rusinek.msscbeerservice.events.BrewBeerEvent;
-import com.rusinek.msscbeerservice.events.NewInventoryEvent;
+import com.rusinek.common.events.BrewBeerEvent;
+import com.rusinek.common.events.NewInventoryEvent;
 import com.rusinek.msscbeerservice.repositories.BeerRepository;
 import com.rusinek.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import static com.rusinek.msscbeerservice.config.JmsConfig.BREWING_REQUEST_QUEUE;
 import static com.rusinek.msscbeerservice.config.JmsConfig.NEW_INVENTORY_QUEUE;
@@ -25,6 +26,7 @@ public class BrewBeerListener {
     private final BeerRepository beerRepository;
     private final JmsTemplate jmsTemplate;
 
+    @Transactional
     @JmsListener(destination = BREWING_REQUEST_QUEUE)
     public void listen(BrewBeerEvent event) {
         BeerDto beerDto = event.getBeerDto();
