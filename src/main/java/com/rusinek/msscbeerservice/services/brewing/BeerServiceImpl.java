@@ -1,7 +1,8 @@
-package com.rusinek.msscbeerservice.services;
+package com.rusinek.msscbeerservice.services.brewing;
 
 import com.rusinek.msscbeerservice.domain.Beer;
 import com.rusinek.msscbeerservice.repositories.BeerRepository;
+import com.rusinek.msscbeerservice.services.BeerService;
 import com.rusinek.msscbeerservice.web.controller.NotFoundException;
 import com.rusinek.msscbeerservice.web.mappers.BeerMapper;
 import com.rusinek.msscbeerservice.web.model.BeerDto;
