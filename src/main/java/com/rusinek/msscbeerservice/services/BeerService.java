@@ -1,8 +1,8 @@
 package com.rusinek.msscbeerservice.services;
 
-import com.rusinek.msscbeerservice.web.model.BeerDto;
-import com.rusinek.msscbeerservice.web.model.BeerPagedList;
-import com.rusinek.msscbeerservice.web.model.BeerStyleEnum;
+import com.rusinek.brewery.model.BeerDto;
+import com.rusinek.brewery.model.BeerPagedList;
+import com.rusinek.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;

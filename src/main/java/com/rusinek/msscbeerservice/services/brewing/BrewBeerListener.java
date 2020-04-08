@@ -1,10 +1,10 @@
 package com.rusinek.msscbeerservice.services.brewing;
 
 import com.rusinek.msscbeerservice.domain.Beer;
-import com.rusinek.common.events.BrewBeerEvent;
-import com.rusinek.common.events.NewInventoryEvent;
+import com.rusinek.brewery.model.events.BrewBeerEvent;
+import com.rusinek.brewery.model.events.NewInventoryEvent;
 import com.rusinek.msscbeerservice.repositories.BeerRepository;
-import com.rusinek.msscbeerservice.web.model.BeerDto;
+import com.rusinek.brewery.model.BeerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

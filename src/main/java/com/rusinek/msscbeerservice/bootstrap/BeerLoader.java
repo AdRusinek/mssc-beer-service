@@ -2,13 +2,12 @@ package com.rusinek.msscbeerservice.bootstrap;
 
 import com.rusinek.msscbeerservice.domain.Beer;
 import com.rusinek.msscbeerservice.repositories.BeerRepository;
-import com.rusinek.msscbeerservice.web.model.BeerStyleEnum;
+import com.rusinek.brewery.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 /**
  * Created by Adrian Rusinek on 03.04.2020

@@ -1,7 +1,7 @@
 package com.rusinek.msscbeerservice.services;
 
 import com.rusinek.msscbeerservice.domain.Beer;
-import com.rusinek.common.events.BrewBeerEvent;
+import com.rusinek.brewery.model.events.BrewBeerEvent;
 import com.rusinek.msscbeerservice.repositories.BeerRepository;
 import com.rusinek.msscbeerservice.services.inventory.BeerInventoryService;
 import com.rusinek.msscbeerservice.web.mappers.BeerMapper;

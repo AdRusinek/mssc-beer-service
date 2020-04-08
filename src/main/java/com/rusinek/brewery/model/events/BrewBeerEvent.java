@@ -1,6 +1,6 @@
-package com.rusinek.common.events;
+package com.rusinek.brewery.model.events;
 
-import com.rusinek.msscbeerservice.web.model.BeerDto;
+import com.rusinek.brewery.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 /**
