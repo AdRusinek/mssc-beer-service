@@ -10,14 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 import java.util.UUID;
 
-import static com.rusinek.msscbeerservice.services.inventory.BeerInventoryServiceRestTemplateImpl.INVENTORY_PATH;
-
 /**
  * Created by Adrian Rusinek on 10.04.2020
  **/
-@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClient.class)
+@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClientFailover.class)
 public interface InventoryServiceFeignClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = INVENTORY_PATH)
-    ResponseEntity<List<BeerInventoryDto>> getOnHandInventory(@PathVariable UUID beerId);
+    @RequestMapping(method = RequestMethod.GET, value = BeerInventoryServiceRestTemplateImpl.INVENTORY_PATH)
+    ResponseEntity<List<BeerInventoryDto>> getOnhandInventory(@PathVariable UUID beerId);
 }
