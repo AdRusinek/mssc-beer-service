@@ -15,7 +15,7 @@ import static com.rusinek.msscbeerservice.services.inventory.BeerInventoryServic
 /**
  * Created by Adrian Rusinek on 10.04.2020
  **/
-@FeignClient(name = "inventory-service")
+@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClient.class)
 public interface InventoryServiceFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = INVENTORY_PATH)
